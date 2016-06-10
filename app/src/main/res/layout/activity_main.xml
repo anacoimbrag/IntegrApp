@@ -29,18 +29,18 @@
                     android:layout_height="wrap_content"
                     android:id="@+id/linearLayout">
 
-                <EditText
-                        android:layout_width="43dp"
-                        android:layout_height="wrap_content"
-                        android:inputType="numberSigned|numberDecimal"
-                        android:ems="1"
-                        android:id="@+id/txtCinco"
-                        android:nextFocusDown="@+id/txtQuatro"/>
+                <!--<EditText-->
+                        <!--android:layout_width="43dp"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:inputType="numberSigned|numberDecimal"-->
+                        <!--android:ems="1"-->
+                        <!--android:id="@+id/txtCinco"-->
+                        <!--android:nextFocusDown="@+id/txtQuatro"/>-->
 
                 <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="X⁵+"
+                        android:text="e^x"
                         android:id="@+id/textView"/>
 
                 <EditText
@@ -130,7 +130,7 @@
             <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="≤ X ≥"
+                    android:text="≤ X ≤"
                     android:id="@+id/textView6"
                     />
 
@@ -175,7 +175,7 @@
                                 android:layout_height="wrap_content"
                                 android:textAppearance="?android:attr/textAppearanceMedium"
                                 android:textStyle="bold"
-                                android:text="Funçao"
+                                android:text="Integral Indefinida"
                                 android:id="@+id/txtEq"/>
 
                         <TextView
@@ -207,7 +207,7 @@
                                 android:layout_height="wrap_content"
                                 android:textAppearance="?android:attr/textAppearanceMedium"
                                 android:textStyle="bold"
-                                android:text="Indefinida"/>
+                                android:text="Integral Indefinida"/>
 
                         <TextView
                                 android:layout_width="wrap_content"
@@ -239,7 +239,7 @@
                             android:layout_height="wrap_content"
                             android:textAppearance="?android:attr/textAppearanceMedium"
                             android:textStyle="bold"
-                            android:text="Definida"/>
+                            android:text="Integral Definida"/>
 
                     <TextView
                             android:layout_width="wrap_content"
@@ -272,7 +272,7 @@
                                 android:layout_height="wrap_content"
                                 android:textAppearance="?android:attr/textAppearanceMedium"
                                 android:textStyle="bold"
-                                android:text="Numérico"/>
+                                android:text="Valor Numérico"/>
 
                         <TextView
                                 android:layout_width="wrap_content"

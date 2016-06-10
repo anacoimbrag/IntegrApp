@@ -35,7 +35,7 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        txtCinco = (EditText)findViewById(R.id.txtCinco);
+//        txtCinco = (EditText)findViewById(R.id.txtCinco);
         txtQuatro = (EditText)findViewById(R.id.txtQuatro);
         txtTres = (EditText)findViewById(R.id.txtTres);
         txtDois = (EditText)findViewById(R.id.txtDois);
@@ -60,17 +60,17 @@ public class MainActivity extends Activity {
                 String resultadoMin = "";
                 double resultado_numerico = 0;
                 if(txtCinco.getText().toString().length() > 0){
-                    if(Integer.valueOf(txtCinco.getText().toString()) != 1) equacao += txtCinco.getText().toString();
-                    equacao += "x⁵";
-                    if(Integer.valueOf(txtCinco.getText().toString()) != 1) indefinida += txtCinco.getText().toString();
-                    indefinida += "x⁶/6";
+                    //if(Integer.valueOf(txtCinco.getText().toString()) != 1) equacao += txtCinco.getText().toString();
+                    equacao += "e^x";
+                    //if(Integer.valueOf(txtCinco.getText().toString()) != 1) indefinida += txtCinco.getText().toString();
+                    indefinida += "e^x";
                     if(txtMaximo.getText().toString().length() > 0){
-                        resultado_numerico += (Double.valueOf(txtCinco.getText().toString())/6 * Math.pow(Integer.valueOf(txtMaximo.getText().toString()),6));
-                        resultadoMax += txtCinco.getText().toString() + "x" + Math.pow(Integer.valueOf(txtMaximo.getText().toString()),6) + "/6";;
+                        resultado_numerico +=  Math.pow(Math.E,Integer.valueOf(txtMaximo.getText().toString()));
+                        resultadoMax += "e^" + Integer.valueOf(txtMaximo.getText().toString());
                     }
                     if(txtMinimo.getText().toString().length() > 0){
-                        resultadoMin += txtCinco.getText().toString() + "x" + Math.pow(Integer.valueOf(txtMinimo.getText().toString()),6) + "/6";
-                        resultado_numerico += -(Integer.valueOf(txtCinco.getText().toString()) * Math.pow(Integer.valueOf(txtMinimo.getText().toString()), 6))/6;
+                        resultadoMin += "e^" + Integer.valueOf(txtMinimo.getText().toString());
+                        resultado_numerico += -Math.pow(Math.E,Integer.valueOf(txtMinimo.getText().toString()));
                     }
                 }
                 if(txtQuatro.getText().toString().length() > 0){
@@ -172,7 +172,7 @@ public class MainActivity extends Activity {
                     }
                 }
                 indefinida += " + C";
-                txtEquacao.setText(equacao);
+                txtEquacao.setText(equacao +"dx");
                 txtIndefinido.setText(indefinida);
                 txtDefinido.setText(resultadoMax + " - (" + resultadoMin + ")");
                 txtNumerico.setText(String.valueOf(resultado_numerico));
